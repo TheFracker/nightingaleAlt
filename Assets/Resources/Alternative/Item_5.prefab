@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   m_Layer: 0
   m_Name: Item_5
-  m_TagString: item_3_a
+  m_TagString: item_0_a
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
