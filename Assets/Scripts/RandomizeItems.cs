@@ -5,9 +5,9 @@ public class RandomizeItems : MonoBehaviour {
 
 	// Der skal 5 items på, 14 at vælge imellem, gør det random for hver gang man starter app'en
 
-	GameObject[] normal = new GameObject[14];
-	GameObject[] alternative = new GameObject[14];
-	int[] allNum = new int[14];
+	GameObject[] normal = new GameObject[13];
+	GameObject[] alternative = new GameObject[13];
+	int[] allNum = new int[13];
 	public static int[] numToUse = new int[5];
 	public static int o = 0;
 
@@ -16,7 +16,7 @@ public class RandomizeItems : MonoBehaviour {
 
 		// Two arrays that each contain all the items. One has all the items that have normal sounds
 		// the other have all the items with alternative sounds
-		for(int i = 0; i < 14; i++)
+		for(int i = 0; i < 13; i++)
 		{
 			normal[i] = Resources.Load("Normal/Item_" + i) as GameObject;
 			alternative[i] = Resources.Load("Alternative/Item_" + i) as GameObject;
@@ -29,7 +29,7 @@ public class RandomizeItems : MonoBehaviour {
 			bool set = false;
 			while(!set)
 			{
-				int rand = Random.Range(0,14);
+				int rand = Random.Range(0,13);
 				if(allNum[rand] != -1)
 				{
 					numToUse[i] = allNum[rand];
