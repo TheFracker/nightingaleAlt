@@ -3,6 +3,22 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - item_0_n
+  - item_1_n
+  - item_2_n
+  - item_3_n
+  - item_4_n
+  - item_0_a
+  - item_1_a
+  - item_2_a
+  - item_3_a
+  - item_4_a
+  - left
+  - right
+  - 
+  - 
+  - 
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -12,7 +28,7 @@ TagManager:
   Builtin Layer 5: 
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
+  User Layer 8: Background
   User Layer 9: 
   User Layer 10: 
   User Layer 11: 
