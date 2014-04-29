@@ -8,7 +8,7 @@ public class RandomizeItems : MonoBehaviour {
 	GameObject[] normal = new GameObject[14];
 	GameObject[] alternative = new GameObject[14];
 	int[] allNum = new int[14];
-	int[] numToUse = new int[5];
+	public static int[] numToUse = new int[5];
 	public static int o = 0;
 
 	// Use this for initialization
@@ -48,6 +48,7 @@ public class RandomizeItems : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		Change ();
 	}
 
