@@ -3,15 +3,12 @@ using System.Collections;
 
 public class RandomizeItems : MonoBehaviour {
 
-	// Der skal 5 items på, 14 at vælge imellem, gør det random for hver gang man starter app'en
-
 	GameObject[] normal = new GameObject[13];
 	GameObject[] alternative = new GameObject[13];
 	int[] allNum = new int[13];
 	public static int[] numToUse = new int[5];
 	public static int o = 0;
-
-	// Use this for initialization
+	
 	void Start () {
 
 		// Two arrays that each contain all the items. One has all the items that have normal sounds
@@ -37,24 +34,21 @@ public class RandomizeItems : MonoBehaviour {
 					set = true;
 				}
 			}
+
 			alternative [numToUse [i]].renderer.enabled = false;
+			alternative [numToUse [i]].collider2D.enabled = false;
 			alternative [numToUse [i]].tag = "item_" + i + "_a";
 			normal [numToUse [i]].renderer.enabled = false;
+			normal [numToUse [i]].collider2D.enabled = false;
 			normal [numToUse [i]].tag = "item_" + i + "_n";
 			Instantiate (normal [numToUse[i]], Vector3.right * -5, Quaternion.identity);
 			Instantiate (alternative [numToUse[i]], Vector3.right * 5, Quaternion.identity);
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		Change ();
-	}
-
-	void Change()
-	{
-		GameObject.FindGameObjectWithTag ("item_" + o + "_n").renderer.enabled = true;
-		GameObject.FindGameObjectWithTag ("item_" + o + "_a").renderer.enabled = true;
+		// Show the first item on screen and also set its collider to true, so it can be clicked
+		GameObject.FindGameObjectWithTag ("item_0_n").renderer.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_0_n").collider2D.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_0_a").renderer.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_0_a").collider2D.enabled = true;
 	}
 }

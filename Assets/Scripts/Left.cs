@@ -19,9 +19,13 @@ public class Left : MonoBehaviour {
 	void OnMouseUpAsButton()
 	{
 		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_n").renderer.enabled = false;
+		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_n").collider2D.enabled = false;
 		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_a").renderer.enabled = false;
+		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_a").collider2D.enabled = false;
 		RandomizeItems.o--;
 		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_n").renderer.enabled = true;
-		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_n").renderer.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_n").collider2D.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_a").renderer.enabled = true;
+		GameObject.FindGameObjectWithTag ("item_" + RandomizeItems.o + "_a").collider2D.enabled = true;
 	}
 }
